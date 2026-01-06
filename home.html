@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | MatchaKu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #9c9c9c;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(images/home.png);
+        }
+
+        .navbar {
+            background: rgba(11, 95, 59, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 8px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+            margin-bottom: 25px;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand { 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+            gap: 12px; 
+        }
+        
+        .nav-links { 
+        display: flex; 
+        gap: 8px; 
+        }
+        .navbar a.nav-item { 
+        color: rgba(255, 255, 255, 0.8); 
+        text-decoration: none; 
+        font-weight: 600; 
+        font-size: 14px; 
+        padding: 9px 20px; 
+        border-radius: 25px; 
+        transition: 0.3s; 
+    }
+        .navbar a.nav-item.active { 
+        background: #fff; 
+        color: #0b5f3b; 
+    }
+
+        .logo-circle { 
+        width: 38px; 
+        height: 38px; 
+        background: #93d6b3; 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-weight: 800; 
+        color: #0b5f3b; 
+        font-size: 18px; 
+    }
+        
+        .logo-text-wrapper { 
+        display: flex; 
+        flex-direction: column; 
+        line-height: 1.1; 
+    }
+        .brand-name { 
+            color: #ffffff; 
+            font-size: 19px; 
+            font-weight: 800; 
+            letter-spacing: 1px; 
+            text-transform: uppercase; 
+        }
+        
+        .brand-tagline { 
+        color: #93d6b3; 
+        font-size: 9px; 
+        font-weight: 600; 
+        letter-spacing: 3px; 
+        text-transform: uppercase; 
+    }
+
+
+        .main-container { 
+        width: 100%; 
+        max-width: 1100px; 
+        background: #ffffff; 
+        border-radius: 20px 20px 0 0; 
+        overflow: hidden; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+    }
+
+        .row { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        align-items: center; 
+    }
+        .col-left, .col-right { 
+        padding: 60px; 
+    }
+    
+    .col-right a:hover{
+        background-color: #148268;
+    }
+
+    .col-right h1 {
+        font-family: Georgia, serif;
+        text-transform: uppercase;
+
+    }
+
+        .hero-image-area { 
+        height: 500px; 
+    }
+        .hero-image-area img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+        .section-story { background-color: #fcfcfc; border-top: 1px solid #eee; }
+
+        /* Ini untuk best seller menu guys */
+        .section-featured {
+            padding: 80px 60px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .section-featured h2 { 
+        margin-bottom: 40px; 
+        color: #0b5f3b; 
+    }
+
+        .section-featured h4 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px; /* jarak antar kotak ini ya guys */
+        }
+
+        .menu-item {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-item:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+        /* ini untuk semua foto supaya tinggi nyaa sama */
+        .img-container {
+            width: 100%;
+            height: 250px; /* kalo mau ubah tinggi nya yang ini */
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ini biar foto ngga gepeng jadi ngikut ukuran */
+            transition: 0.5s;
+        }
+
+        .menu-item h4 {
+            color: #1e4a3c;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        p { 
+        font-size: 17px; 
+        line-height: 1.8; 
+        color: #444; 
+        text-align: justify; 
+        margin-bottom: 20px; 
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+        /* ini buat footer ya guys */
+        h1 { font-size: 48px; color: #0b5f3b; margin-bottom: 20px; }
+        h2 { font-family: Georgia, serif; font-size: 38px; color: #1e4a3c; }
+        .btn-menu { display: inline-block; padding: 12px 30px; background: #0b5f3b; color: white; text-decoration: none; border-radius: 25px; font-weight: 600; }
+
+    footer { 
+        width: 100%; 
+        max-width: 1100px; 
+        background: #0b5f3b; 
+        color: white; 
+        padding: 40px; 
+        border-radius: 0 0 20px 20px; 
+        text-align: center; 
+    }
+
+    footer p {
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        text-align: center;
+    }
+    
+        .footer-links a { 
+        color: white; 
+        margin: 0 10px; 
+        text-decoration: none; 
+        font-size: 14px; 
+        opacity: 0.8; 
+    }
+
+        @media (max-width: 850px) {
+            .row, .menu-grid { grid-template-columns: 1fr; }
+            .col-left, .col-right { padding: 40px 30px; }
+            .img-container { height: 300px; }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="nav-brand">
+            <div class="logo-circle">M</div>
+            <div class="logo-text-wrapper">
+                <span class="brand-name">MatchaKu</span>
+                <span class="brand-tagline">Premium Tea</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="home.html" class="nav-item active">Home</a>
+            <a href="menu.html" class="nav-item">Menu</a>
+            <a href="aboutus.html" class="nav-item">About Us</a>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="row">
+            <div class="hero-image-area">
+                <img src="images/home.png" alt="MatchaKu Hero">
+            </div>
+            <div class="col-right">
+                <h1>Welcome to MatchaKu</h1>
+                <p>Nikmati perpaduan sempurna antara tradisi dan inovasi dalam setiap cangkir Matcha kami. Dibuat dengan dedikasi tinggi untuk kenyamanan Anda.</p>
+                <a href="menu.html" class="btn-menu">Eksplor Menu</a>
+            </div>
+        </div>
+
+        <div class="row section-story">
+            <div class="col-left">
+                <span style="color: #0b5f3b; font-weight: bold; text-transform: uppercase;">- Our Story -</span>
+                <h2>Grind The Essentials</h2>
+            </div>
+            <div class="col-right">
+                <p>Kami percaya bahwa kebahagiaan dimulai dari hal-hal kecil. MatchaKu hadir untuk menemani setiap langkah perjalanan Anda dengan kehangatan teh terbaik.</p>
+                <p>Dengan filosofi <strong>"Grind"</strong>, kami menginspirasi Anda untuk tetap menyadari hal-hal esensial di tengah kesibukan melalui tiap cangkir yang kami sajikan.</p>
+            </div>
+        </div>
+
+        <section class="section-featured">
+            <h2>Our Best Seller</h2>
+            <div class="menu-grid">
+                
+                <div class="menu-item">
+                    <div class="img-container">
+                        <a href="strawberry_matcha.html" style="text-decoration: none;">
+                        <img src="images/STRAWBERRY MATCHA.png" alt="Strawberry Matcha">
+                        </a>
+                    </div>
+                    <h4>Strawberry Matcha</h4>
+                </div>
+
+                <div class="menu-item">
+                    <div class="img-container">
+                        <a href="matcha_latte.html" style="text-decoration: none;">
+                        <img src="images/MATCHA LATTE .png" alt="Matcha Latte">
+                        </a>
+                    </div>
+                    <h4>Matcha Latte</h4>
+                </div>
+
+                <div class="menu-item">
+                    <div class="img-container">
+                        <a href="matcha_tea.html" style="text-decoration: none;">
+                        <img src="images/MATCHA TEA.png" alt="Matcha Tea">
+                        </a>
+                    </div>
+                    <h4>Matcha Tea</h4>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Lokasi</a>
+        </div>
+    </footer>
+
+    </body>
+
+</html>

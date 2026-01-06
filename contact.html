@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MatchaKu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #fdfdfd;
+            background-image: url(https://i.pinimg.com/736x/3c/c2/9d/3cc29d9e5a5975b7edab12c76cb6c34f.jpg);
+            padding: 20px 0; /* Padding atas bawah saja */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR (DISAMAKAN LEBARNYA) ===== */
+        .navbar {
+            background: rgba(11, 95, 59, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 8px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 92%;             /* Gunakan persentase agar responsif */
+            max-width: 1100px;      /* Batas maksimal sama dengan card */
+            margin: 0 auto 25px auto;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .navbar a.nav-item {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 9px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .navbar a.nav-item:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a.nav-item.active {
+            background: #fff;
+            color: #0b5f3b;
+        }
+
+        .logo-circle {
+            width: 38px;
+            height: 38px;
+            background: #93d6b3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #0b5f3b;
+            font-size: 18px;
+        }
+
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-name {
+            color: #ffffff;
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand-tagline {
+            color: #93d6b3;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+
+        /* ===== CARD (DISAMAKAN LEBARNYA DENGAN NAVBAR) ===== */
+        .card {
+            width: 92%;             /* Harus sama dengan .navbar */
+            max-width: 1100px;      /* Harus sama dengan .navbar */
+            background: #ffffff;
+            border-top-left-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            margin: 0 auto;         /* Centering */
+        }
+
+        .card-image {
+            width: 50%;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            width: 50%;
+            padding: 50px;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content h1 {
+            font-size: 48px;
+            color: #0b5f3b;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0 #00000040;
+            font-family: Georgia, serif;
+            text-transform: uppercase;
+        }
+
+        .card-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .contact-info span {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: #0b5f3b;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .navbar {
+                width: 95%;
+                padding: 8px 15px;
+            }
+            
+            .card {
+                width: 95%;
+                flex-direction: column;
+            }
+
+            .card-image,
+            .card-content {
+                width: 100%;
+            }
+
+            .card-image {
+                height: 300px;
+                min-height: auto;
+            }
+
+            .card-content {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .contact-info div {
+                justify-content: center;
+            }
+
+            .card-content h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .brand-tagline { display: none; }
+            .navbar a.nav-item { padding: 8px 12px; font-size: 12px; }
+        }
+
+        .card-image .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba(207,207,207,0) 0%,
+                rgba(207,207,207,0.25) 35%,
+                rgba(207,207,207,0.6) 65%,
+                rgba(207,207,207,1) 100%
+            );
+        }
+
+        /* Overlay Fade untuk Mobile (Arahnya berubah ke bawah) */
+        @media (max-width: 900px) {
+            .card-image .overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(207,207,207,0) 0%,
+                    rgba(207,207,207,1) 100%
+                );
+            }
+        }
+
+        footer { 
+        width: 100%; 
+        max-width: 1100px; 
+        background: #0b5f3b; 
+        color: white; 
+        padding: 40px; 
+        border-radius: 0 0 20px 20px; 
+        text-align: center; 
+    }
+
+    footer p {
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        text-align: center;
+    }
+    
+        .footer-links a { 
+        color: white; 
+        margin: 0 10px; 
+        text-decoration: none; 
+        font-size: 14px; 
+        opacity: 0.8; 
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="nav-brand">
+            <div class="logo-circle">M</div>
+            <div class="logo-text-wrapper">
+                <span class="brand-name">MatchaKu</span>
+                <span class="brand-tagline">Premium Tea</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="home.html" class="nav-item">Home</a>
+            <a href="menu.html" class="nav-item">Menu</a>
+            <a href="aboutus.html" class="nav-item">About Us</a>
+            <a href="contact.html" class="nav-item active">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/8b/3d/71/8b3d71d76ba60108a25640900d0fdacf.jpg" alt="MatchaKu Contact">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="card-content">
+            <h1>Contact Us</h1>
+            <p>
+                Butuh bantuan terkait belanja, stok produk, atau status pesanan? Jangan ragu untuk menghubungi kami. Kami siap memberikan layanan terbaik untuk setiap pertanyaan dan kebutuhan Anda.
+            </p>
+
+            <div class="contact-info">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>021-0115624</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>matcaku@gmail.co.id</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Lokasi</a>
+        </div>
+    </footer>
+
+</body>
+</html>

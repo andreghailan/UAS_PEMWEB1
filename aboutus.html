@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #9c9c9c;
+            padding: 20px;
+            background-image: url(https://i.pinimg.com/736x/9e/37/4c/9e374c5e5dbe8049d5712de3c8611d58.jpg);
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(11, 95, 59, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 8px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 92%;             /* Gunakan persentase agar responsif */
+            max-width: 1100px;      /* Batas maksimal sama dengan card */
+            margin: 0 auto 25px auto;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .navbar a.nav-item {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 9px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .navbar a.nav-item:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar a.nav-item.active {
+            background: #fff;
+            color: #0b5f3b;
+        }
+
+        .logo-circle {
+            width: 38px;
+            height: 38px;
+            background: #93d6b3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #0b5f3b;
+            font-size: 18px;
+        }
+
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-name {
+            color: #ffffff;
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand-tagline {
+            color: #93d6b3;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* ===== CARD ===== */
+        .card {
+            width: 92%;             /* Harus sama dengan .navbar */
+            max-width: 1100px;      /* Harus sama dengan .navbar */
+            background: #fdfdfd;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            margin: 0 auto;         /* Centering */        }
+
+        .card2 {
+            width: 92%;             /* Harus sama dengan .navbar */
+            max-width: 1100px;      /* Harus sama dengan .navbar */
+            background: #fdfdfd;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            margin: 0 auto;         /* Centering */        
+        }
+
+        .card-image {
+            width: 50%;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            width: 50%;
+            padding: 50px;
+            color: #222;
+        }
+
+        .card-content h1 {
+            font-size: 48px;
+            color: #0b5f3b;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0 #00000040;
+            font-family: cascadia code;
+            text-align: center;
+        }
+
+        .card-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+
+        .contact-info {
+            font-size: 18px;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: #000;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .card {
+                flex-direction: column;
+            }
+
+            .card-image,
+            .card-content {
+                width: 100%;
+            }
+
+            .card-content {
+                padding: 30px;
+            }
+
+            .card-content h1 {
+                font-size: 36px;
+            }
+        }
+
+        .card-image .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+        to right,
+        rgba(207,207,207,0) 0%,
+        rgba(207,207,207,0.25) 35%,
+        rgba(207,207,207,0.6) 65%,
+        rgba(207,207,207,1) 100%
+    );
+}
+
+    footer { 
+        width: 100%;
+            background: #0b5f3b; 
+            color: white; 
+            padding: 40px; 
+            border-radius: 0 0 20px 20px; 
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+            max-width: 1100px;
+            margin-left: 58px;
+
+    }
+
+
+    footer p {
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        text-align: center;
+    }
+    
+        .footer-links a { 
+        color: white; 
+        margin: 0 10px; 
+        text-decoration: none; 
+        font-size: 14px; 
+        opacity: 0.8; 
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="home.html" class="nav-brand">
+            <div class="logo-circle">M</div>
+            <div class="logo-text-wrapper">
+                <span class="brand-name">MatchaKu</span>
+                <span class="brand-tagline">Premium Tea</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="home.html" class="nav-item">Home</a>
+            <a href="menu.html" class="nav-item">Menu</a>
+            <a href="aboutus.html" class="nav-item active">About Us</a>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- CARD -->
+    <div class="card">
+        <div class="card-image">
+            <img src="images/The History of Matcha.jpg" alt="Fore Coffee">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="card-content">
+            <h1>Sejarah</h1>
+            <p>
+                Toko kami berdiri sejak tahun 2025 dan telah melayani pelanggan selama lebih dari 30 tahun. 
+                Sejak awal berdiri, kami berkomitmen menghadirkan rasa matcha original yang konsisten dan autentik. 
+                Meskipun mempertahankan cita rasa khas yang menjadi identitas utama, kami terus berinovasi dengan 
+                menghadirkan berbagai menu dan varian rasa baru agar tetap relevan dengan perkembangan selera 
+                pelanggan. Hingga saat ini, toko kami telah menjual lebih dari 12.000 gelas setiap tahunnya, 
+                sebagai bukti kepercayaan dan loyalitas pelanggan.
+            </p>
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="card-image">
+            <img src="images/about1.jpg" alt="Fore Coffee">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="card-content">
+            <h1>Visi & Misi</h1>
+            <p>
+                Visi kami adalah menjadi toko minuman matcha yang terpercaya dan digemari oleh berbagai 
+                kalangan dengan kualitas rasa yang konsisten dan pelayanan terbaik. 
+                Misi kami adalah menjaga kualitas bahan baku dan proses penyajian, terus berinovasi dalam menu 
+                tanpa meninggalkan rasa original, serta memberikan pelayanan yang bertanggung jawab dan 
+                memuaskan bagi setiap pelanggan.
+            </p>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="card-image">
+            <img src="images/about2.jpg" alt="Fore Coffee">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="card-content">
+            <h1>Keunikan</h1>
+            <p>
+                Keunikan toko kami terletak pada konsistensi rasa matcha original yang tidak berubah sejak awal 
+                berdiri, dipadukan dengan inovasi menu yang terus berkembang. Kami selalu mengutamakan kualitas 
+                produk, kebersihan, dan pelayanan, serta bertanggung jawab penuh atas setiap produk yang kami 
+                sajikan kepada pelanggan.
+            </p>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="card-image">
+            <img src="images/Matcha Glass.jpg" alt="Fore Coffee">
+            <div class="overlay"></div>
+        </div>
+
+        <div class="card-content">
+            <h1>Testimoni</h1>
+            <p>
+                “Rasa matchanya benar-benar khas dan tidak pernah berubah sejak dulu. Selalu jadi favorit saya.” 
+                — Mocking Bird
+            </p>
+            <p>
+                “Suka banget karena rasanya konsisten, tapi tetap ada menu baru yang menarik untuk dicoba.” 
+                — Belobog
+            </p>
+            <p>
+                “Pelayanannya ramah dan kualitas minumannya selalu terjaga. Sangat recommended.” 
+                — Cunning Harres
+            </p>
+            <p>
+                “Selalu beli disini, karena hanya tempat ini saja yang berani mempertahankan menu-menu nya” 
+                — Obol Squad
+            </p>                            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Lokasi</a>
+        </div>
+    </footer>
+
+</body>
+</html>
