@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu | MatchaKu</title>
-    <link rel="stylesheet" href="matcha_latte.css">
+    <link rel="stylesheet" href="css/matcha_latte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-     <nav class="navbar">
+    <nav class="navbar">
         <a href="home.html" class="nav-brand">
             <div class="logo-circle">M</div>
             <div class="logo-text-wrapper">
@@ -25,8 +26,16 @@
             <a href="menu.html" class="nav-item active">Menu</a>
             <a href="aboutus.html" class="nav-item">About Us</a>
             <a href="contact.html" class="nav-item">Contact Us</a>
+            <div class="dark-toggle">
+                <input type="checkbox" id="darkSwitch" onclick="toggleDark()">
+                <label for="darkSwitch"></label><span>🌙</span>
+            </div>
         </div>
+        <script src="js/darkmode.js"></script>
+
     </nav>
+
+
 
     <!-- MENU -->
     <div class="menu-section">
@@ -40,30 +49,60 @@
                 </div>
             </div>
             <div class="aboutmenu">
-                <h2>About Matcha Latte</h2>
-                <p>Matcha Latte is a delightful blend of finely ground green tea leaves and steamed milk, creating a
-                    creamy and flavorful beverage. Known for its vibrant green color and rich taste, Matcha Latte offers
-                    a perfect balance of sweetness and earthiness. It's not only delicious but also packed with
-                    antioxidants, making it a popular choice for health-conscious individuals. Whether served hot or
-                    iced, Matcha Latte is a refreshing treat that can be enjoyed any time of the day.
+                <h2>ABOUT MATCHA LATTE</h2>
+                <div class="garisbawah"></div>
+
+                <p>Matcha Latte adalah campuran yang lezat antara daun teh hijau yang halus dan susu yang dipanaskan,
+                    menciptakan
+                    minuman yang creamy dan beraroma. Dikenal dengan warnanya yang hijau cerah dan rasa yang kaya,
+                    Matcha Latte menawarkan
+                    keseimbangan sempurna. Tidak hanya lezat, tetapi juga kaya akan
+                    antioksidan, menjadikannya pilihan populer bagi mereka yang peduli kesehatan. Baik disajikan panas
+                    maupun
+                    dingin, Matcha Latte adalah minuman menyegarkan yang dapat dinikmati kapan saja sepanjang hari.
                 </p>
-                <button class="btn">Pesan Sekarang</button>
+                <br>
+
+                <div class="ingredient">
+                    <span>Matcha Powder</span>
+                    <span>Fresh Milk</span>
+                    <span>Water</span>
+                    <span>Optional: Sugar / Honey</span>
+                </div>
+
+                <button class="btn" id="btnPesan">Pesan Sekarang</button>
             </div>
         </div>
-    </div> 
-
-    <div id="alertBox" class="alert-box">
-        <div class="alert-content">
-            <h3>☕ Terima Kasih!</h3>
-            <p>Pesanan Matcha Latte kamu berhasil.</p>
-            
-            <button onclick="tutupAlert()">OK</button>
+        <!-- FORM POPUP -->
+        <div id="orderForm" class="popup">
+            <div class="popup-box">
+                <h3>Form Pemesanan</h3>
+                <input type="text" id="nama" placeholder="Nama">
+                <input type="number" id="jumlah" placeholder="Jumlah">
+                <textarea id="catatan" placeholder="Catatan (opsional)"></textarea>
+                <button id="kirimBtn">Kirim</button>
+                <button id="batalBtn">Batal</button>
+            </div>
         </div>
+
+        <!-- ALERT SUKSES -->
+        <div id="alertBox" class="alert-box">
+            <div class="alert-content">
+                <h3>Terima Kasih!</h3>
+                <p>Pesanan kamu berhasil dikirim.</p>
+                <button id="okBtn">OK</button>
+            </div>
+        </div>
+
+
+    </div>
     </div>
 
-    <script src="function.js"></script>
 
 
+
+    <script src="js/function.js"></script>
+    <script src="js/darkmode.js"></script>
     <footer>
         <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
@@ -72,6 +111,8 @@
             <a href="#">Lokasi</a>
         </div>
     </footer>
+
+
 
 </body>
 

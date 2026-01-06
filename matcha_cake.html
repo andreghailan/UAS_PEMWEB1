@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu | MatchaKu</title>
-    <link rel="stylesheet" href="matcha_latte.css">
+    <link rel="stylesheet" href="css/matcha_latte.css">
+
 </head>
 
 <body>
@@ -23,7 +25,12 @@
             <a href="menu.html" class="nav-item active">Menu</a>
             <a href="aboutus.html" class="nav-item">About Us</a>
             <a href="contact.html" class="nav-item">Contact Us</a>
+            <div class="dark-toggle">
+                <input type="checkbox" id="darkSwitch" onclick="toggleDark()">
+                <label for="darkSwitch"></label><span>🌙</span>
+            </div>
         </div>
+        <script src="js/darkmode.js"></script>
     </nav>
 
     <!-- MENU -->
@@ -31,35 +38,56 @@
 
         <div class="menu-grid">
             <div class="menu-item">
-                <img src="images/MATCHA CAKE.jpg" alt="MATCHA CAKE">
+                <img src="images/MATCHA CAKE.jpg" alt="Americano">
                 <div class="menu-content">
                     <h3>Matcha Cake</h3>
                     <div class="price">Rp 28.000</div>
                 </div>
             </div>
             <div class="aboutmenu">
-                <h2>About Matcha Cake</h2>
-                <p>Matcha Cake is a delightful fusion of traditional matcha with the sweet, fruity notes of strawberries and the zesty tang of lemon. This beverage combines the earthy richness of matcha with the natural sweetness of strawberries and the refreshing citrusy flavor of lemon, creating a balanced and refreshing drink. It's perfect for those who enjoy a hint of fruitiness in their tea.
+                <h2>ABOUT MATCHA CAKE</h2>
+                <p>kue lembut yang dibuat dengan matcha premium berkualitas tinggi, menghadirkan cita rasa khas matcha
+                    yang halus dan menenangkan. Aroma teh hijau yang lembut berpadu dengan tekstur cake yang moist dan
+                    ringan, menciptakan pengalaman rasa yang seimbang dan tidak berlebihan.
+
+                    Setiap potongan Matcha Cake dipanggang dengan perhatian pada detail untuk menghasilkan kelembutan
+                    yang konsisten serta rasa yang kaya namun tetap ringan. Sentuhan manis yang pas membuat kue ini
+                    cocok dinikmati oleh pencinta matcha maupun mereka yang baru mencoba dessert berbasis matcha.
+
+                    Matcha Cake sangat cocok sebagai teman minum teh atau kopi, serta pilihan sempurna untuk menemani
+                    waktu santai dan momen spesial. Dengan rasa yang elegan dan tampilan yang menarik, Matcha Cake
+                    menghadirkan kenikmatan sederhana yang berkelas dalam setiap gigitan
                 </p>
+                <br>
+                <h2>INGREDIENT</h2>
+                <ul>
+                    <li>Matcha powder (teh hijau bubuk kualitas premium)</li>
+                    <li>
+                        Milk (susu fresh / full cream / oat milk / almond milk)
+                    </li>
+                    <li>Hot water</li>
+                    <li>Optional (gula, honey)</li>
+                </ul>
+
                 <button class="btn">Pesan Sekarang</button>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div id="alertBox" class="alert-box">
         <div class="alert-content">
-            <h3>☕ Terima Kasih!</h3>
-            <p>Pesanan Matcha Cake kamu berhasil.</p>
-            
+            <h3>Terima Kasih!</h3>
+            <p>Pesanan Matcha Latte kamu berhasil.</p>
+
             <button onclick="tutupAlert()">OK</button>
         </div>
     </div>
 
-    <script src="function.js"></script>
+    <script src="js/function.js"></script>
 
 
     <footer>
-        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
             <a href="#">Instagram</a>
             <a href="#">WhatsApp</a>

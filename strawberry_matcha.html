@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu | MatchaKu</title>
-    <link rel="stylesheet" href="matcha_latte.css">
+    <link rel="stylesheet" href="css/matcha_latte.css">
+
 </head>
 
 <body>
@@ -23,7 +25,12 @@
             <a href="menu.html" class="nav-item active">Menu</a>
             <a href="aboutus.html" class="nav-item">About Us</a>
             <a href="contact.html" class="nav-item">Contact Us</a>
+            <div class="dark-toggle">
+                <input type="checkbox" id="darkSwitch" onclick="toggleDark()">
+                <label for="darkSwitch"></label><span>🌙</span>
+            </div>
         </div>
+        <script src="js/darkmode.js"></script>
     </nav>
 
     <!-- MENU -->
@@ -31,35 +38,56 @@
 
         <div class="menu-grid">
             <div class="menu-item">
-                <img src="images/STRAWBERRY MATCHA.png" alt="STRAWBERRY MATCHA">
+                <img src="images/STRAWBERRY MATCHA.png" alt="Americano">
                 <div class="menu-content">
                     <h3>Strawberry Matcha</h3>
-                    <div class="price">Rp 30.000</div>
+                    <div class="price">Rp 32.000</div>
                 </div>
             </div>
             <div class="aboutmenu">
-                <h2>About Strawberry Matcha</h2>
-                <p>Strawberry Matcha is a delightful fusion of traditional matcha with the sweet, fruity notes of strawberries. This beverage combines the earthy richness of matcha with the natural sweetness of strawberries, creating a balanced and refreshing drink. It's perfect for those who enjoy a hint of fruitiness in their tea.
+                <h2>ABOUT STRAWBERRY MATCHA</h2>
+                <p>perpaduan antara matcha premium berkualitas tinggi dan selai
+                    stroberi yang manis serta segar. Rasa khas matcha yang lembut berpadu sempurna
+                    dengan sentuhan fruity dari stroberi, menciptakan keseimbangan rasa yang kaya namun tetap ringan
+                    untuk dinikmati kapan saja.
+
+                    Setiap gelas diracik dengan perhatian pada detail, menghasilkan tekstur creamy yang halus dan aroma
+                    yang menenangkan. Strawberry Matcha tidak hanya menyegarkan, tetapi juga menghadirkan pengalaman
+                    minum yang nyaman dan memanjakan, cocok untuk menemani waktu santai maupun momen spesial Anda.
+
+                    Minuman ini menjadi pilihan ideal bagi pecinta matcha yang ingin merasakan variasi rasa yang unik,
+                    modern, dan elegan tanpa menghilangkan karakter autentik matcha itu sendiri.
                 </p>
+                <br>
+                <h2>INGREDIENT</h2>
+                <ul>
+                    <li>Matcha powder (teh hijau bubuk kualitas premium)</li>
+                    <li>
+                        Milk (susu fresh / full cream / oat milk / almond milk)
+                    </li>
+                    <li>Strawberry Jam</li>
+                    <li>Water</li>
+                </ul>
+
                 <button class="btn">Pesan Sekarang</button>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div id="alertBox" class="alert-box">
         <div class="alert-content">
-            <h3>☕ Terima Kasih!</h3>
-            <p>Pesanan Strawberry Matcha kamu berhasil.</p>
-            
+            <h3>Terima Kasih!</h3>
+            <p>Pesanan Matcha Latte kamu berhasil.</p>
+
             <button onclick="tutupAlert()">OK</button>
         </div>
     </div>
 
-    <script src="function.js"></script>
+    <script src="js/function.js"></script>
 
 
     <footer>
-        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
             <a href="#">Instagram</a>
             <a href="#">WhatsApp</a>

@@ -16,13 +16,113 @@
 
         body {
             background: #fdfdfd;
-            background-image: url(https://i.pinimg.com/736x/3c/c2/9d/3cc29d9e5a5975b7edab12c76cb6c34f.jpg);
+            background-image: url(https://i.pinimg.com/736x/7f/9b/ab/7f9babc6509892910596ab5af3d49fef.jpg);
             padding: 20px 0; /* Padding atas bawah saja */
             display: flex;
             flex-direction: column;
             align-items: center;
             overflow-x: hidden;
         }
+
+        /* ===== DARK MODE ===== */
+        .dark-toggle {
+            display: flex;
+            align-items: center;
+}
+
+.dark-toggle input {
+    display: none;
+}
+
+.dark-toggle label {
+    width: 46px;
+    height: 24px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Bulatan */
+.dark-toggle label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Saat aktif (Dark Mode) */
+.dark-toggle input:checked + label {
+    background: #93d6b3;
+}
+
+.dark-toggle input:checked + label::after {
+    transform: translateX(22px);
+    background: #0b5f3b;
+}
+
+body.dark {
+    background-color: #0f1f1a !important;
+    color: #eaeaea !important;
+    background-image: none !important;
+}
+
+body.dark .navbar {
+    background: rgba(5, 40, 25, 0.95);
+}
+
+body.dark .navbar a.nav-item {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark .navbar a.nav-item.active {
+    background: rgba(0, 0, 0, 0.95);
+    color: #93d6b3;
+}
+
+body.dark .card {
+    background: #142e24;
+}
+
+body.dark .card-content {
+    color: #e5e7eb;
+}
+
+body.dark .card-content h1 {
+    color: #93d6b3;
+    text-shadow: none;
+}
+
+body.dark .contact-info i {
+    color: #93d6b3;
+}
+
+body.dark footer {
+    background: #142e24;
+}
+
+.dark-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dark-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
 
         /* ===== NAVBAR (DISAMAKAN LEBARNYA) ===== */
         .navbar {
@@ -285,7 +385,14 @@
             <a href="menu.html" class="nav-item">Menu</a>
             <a href="aboutus.html" class="nav-item">About Us</a>
             <a href="contact.html" class="nav-item active">Contact Us</a>
+
+            <div class="dark-toggle">
+            <input type="checkbox" id="darkSwitch" onclick="toggleDark()">
+            <label for="darkSwitch"></label><span>🌙</span>
+            </div>
         </div>
+            <script src="js/darkmode.js"></script>
+        
     </nav>
 
     <div class="card">
@@ -300,21 +407,25 @@
                 Butuh bantuan terkait belanja, stok produk, atau status pesanan? Jangan ragu untuk menghubungi kami. Kami siap memberikan layanan terbaik untuk setiap pertanyaan dan kebutuhan Anda.
             </p>
 
-            <div class="contact-info">
-                <div>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>021-0115624</span>
-                </div>
-                <div>
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>matcaku@gmail.co.id</span>
-                </div>
+        <div class="contact-info">
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>021-0115624</span>
             </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>matchaku@gmail.co.id</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jl. Sudirman No. 45, Jakarta Pusat</span>
+            </div>
+        </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 MatchaKu. Semua Hak Dilindungi.</p>
+        <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
             <a href="#">Instagram</a>
             <a href="#">WhatsApp</a>

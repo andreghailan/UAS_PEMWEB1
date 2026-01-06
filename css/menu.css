@@ -11,7 +11,121 @@ body {
     display: flex; /* Tambahan agar centering navbar max-width bekerja */
     flex-direction: column;
     align-items: center;
-    background-image: url(https://i.pinimg.com/1200x/76/64/1b/76641b53502d4ca601ecd3c240ad6245.jpg);
+    background-image: url(https://i.pinimg.com/736x/7f/9b/ab/7f9babc6509892910596ab5af3d49fef.jpg);
+    /* background-image: url(https://i.pinimg.com/1200x/76/64/1b/76641b53502d4ca601ecd3c240ad6245.jpg); */
+}
+
+.dark-toggle {
+            display: flex;
+            align-items: center;
+}
+
+.dark-toggle input {
+    display: none;
+}
+
+.dark-toggle label {
+    width: 46px;
+    height: 24px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Bulatan */
+.dark-toggle label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Saat aktif (Dark Mode) */
+.dark-toggle input:checked + label {
+    background: #93d6b3;
+}
+
+.dark-toggle input:checked + label::after {
+    transform: translateX(22px);
+    background: #0b5f3b;
+}
+
+body.dark {
+    background-color: #0f1f1a !important;
+    color: #eaeaea !important;
+    background-image: none !important;
+}
+
+
+
+body.dark .navbar {
+    background: rgba(5, 40, 25, 0.95);
+}
+
+body.dark .navbar a.nav-item {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark .navbar a.nav-item.active {
+    background: rgba(0, 0, 0, 0.95);
+    color: #93d6b3;
+}
+
+body.dark .card {
+    background: #142e24;
+}
+
+body.dark .card-content {
+    color: #e5e7eb;
+}
+
+body.dark .card-content h1 {
+    color: #93d6b3;
+    text-shadow: none;
+}
+
+body.dark .contact-info i {
+    color: #93d6b3;
+}
+
+body.dark footer {
+    background: #142e24;
+}
+
+.dark-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.dark .menu-section {
+    background: #1a2f26;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .menu-section h1{
+    color: #93d6b3;
+}
+
+body.dark .menu-section .menu-content {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-btn:hover {
+    background: rgba(255,255,255,0.15);
 }
 
 /* ===== NAVBAR ===== */
@@ -148,7 +262,7 @@ body {
 
 .menu-item img {
     width: 100%;
-    height: 600px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
