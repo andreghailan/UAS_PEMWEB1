@@ -18,111 +18,108 @@
             background-image: url(https://i.pinimg.com/736x/7f/9b/ab/7f9babc6509892910596ab5af3d49fef.jpg);
         }
 
-        /* ===== DARK MODE ===== */
         .dark-toggle {
             display: flex;
             align-items: center;
-}
+        }
 
-.dark-toggle input {
-    display: none;
-}
+        .dark-toggle input {
+            display: none;
+        }
 
-.dark-toggle label {
-    width: 46px;
-    height: 24px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .dark-toggle label {
+            width: 46px;
+            height: 24px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-/* Bulatan */
-.dark-toggle label::after {
-    content: "";
-    width: 18px;
-    height: 18px;
-    background: white;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    border-radius: 50%;
-    transition: 0.3s;
-}
+        .dark-toggle label::after {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: white;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
 
-/* Saat aktif (Dark Mode) */
-.dark-toggle input:checked + label {
-    background: #93d6b3;
-}
 
-.dark-toggle input:checked + label::after {
-    transform: translateX(22px);
-    background: #0b5f3b;
-}
+        .dark-toggle input:checked + label {
+            background: #93d6b3;
+        }
 
-body.dark {
-    background-color: #0f1f1a !important;
-    color: #eaeaea !important;
-    background-image: none !important;
-}
+        .dark-toggle input:checked + label::after {
+            transform: translateX(22px);
+            background: #0b5f3b;
+        }
 
-body.dark .navbar {
-    background: rgba(5, 40, 25, 0.95);
-}
+        body.dark {
+            background-color: #0f1f1a !important;
+            color: #eaeaea !important;
+            background-image: none !important;
+        }
 
-body.dark .navbar a.nav-item {
-    color: rgba(255,255,255,0.7);
-}
+            body.dark .nav  bar {
+                background: rgba(5, 40, 25, 0.95);
+            }
 
-body.dark .navbar a.nav-item.active {
-    background: rgba(0, 0, 0, 0.95);
-    color: #93d6b3;
-}
+            body.dark .navbar a.nav-item {
+                color: rgba(255,255,255,0.7);
+            }
 
-body.dark .card {
-    background: #142e24;
-}
+            body.dark .navbar a.nav-item.active {
+                background: rgba(0, 0, 0, 0.95);
+                color: #93d6b3;
+            }
 
-body.dark .card2 {
-    background: #142e24;
-}
+            body.dark .card {
+                background: #142e24;
+            }
 
-body.dark .card-content {
-    color: #e5e7eb;
-    background: 0b5f3b;
-}
+            body.dark .card2 {
+                background: #142e24;
+            }
 
-body.dark .card-content h1 {
-    color: #93d6b3;
-    text-shadow: none;
-}
+            body.dark .card-content {
+                color: #e5e7eb;
+                background: 0b5f3b;
+            }
 
-body.dark .contact-info i {
-    color: #93d6b3;
-}
+            body.dark .card-content h1 {
+                color: #93d6b3;
+                text-shadow: none;
+            }
 
-body.dark footer {
-    background: #142e24;
-}
+            body.dark .contact-info i {
+                color: #93d6b3;
+            }
 
-.dark-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.4);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
+            body.dark footer {
+                background: #142e24;
+            }
+
+            .dark-btn {
+                background: transparent;
+                border: 1px solid rgba(255,255,255,0.4);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+            }
 
 .dark-btn:hover {
     background: rgba(255,255,255,0.15);
 }
 
-        /* ===== NAVBAR ===== */
         .navbar {
             background: rgba(11, 95, 59, 0.95);
             backdrop-filter: blur(10px);
@@ -131,8 +128,8 @@ body.dark footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 92%;             /* Gunakan persentase agar responsif */
-            max-width: 1100px;      /* Batas maksimal sama dengan card */
+            width: 92%;             /* ini biar responsif */
+            max-width: 1100px;      /* biar ukurannya sama dengan card di dalam body ya guys */
             margin: 0 auto 25px auto;
             position: sticky;
             top: 20px;
@@ -222,8 +219,8 @@ body.dark footer {
          }
 
         .card2 {
-            width: 92%;             /* Harus sama dengan .navbar */
-            max-width: 1100px;      /* Harus sama dengan .navbar */
+            width: 92%;             
+            max-width: 1100px;      
             background: #fdfdfd;
             display: flex;
             overflow: hidden;
@@ -345,7 +342,6 @@ body.dark footer {
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="home.html" class="nav-brand">
             <div class="logo-circle">M</div>
@@ -368,7 +364,6 @@ body.dark footer {
             <script src="js/darkmode.js"></script>
     </nav>
 
-    <!-- CARD -->
     <div class="card">
         <div class="card-image">
             <img src="images/The History of Matcha.jpg" alt="Fore Coffee">
@@ -454,8 +449,8 @@ body.dark footer {
     <footer>
         <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">WhatsApp</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://web.whatsapp.com/">WhatsApp</a>
             <a href="#">Lokasi</a>
         </div>
     </footer>

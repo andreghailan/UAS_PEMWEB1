@@ -6,7 +6,6 @@
     <title>Contact Us | MatchaKu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +16,7 @@
         body {
             background: #fdfdfd;
             background-image: url(https://i.pinimg.com/736x/7f/9b/ab/7f9babc6509892910596ab5af3d49fef.jpg);
-            padding: 20px 0; /* Padding atas bawah saja */
+            padding: 20px 0; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,7 +56,6 @@
     transition: 0.3s;
 }
 
-/* Saat aktif (Dark Mode) */
 .dark-toggle input:checked + label {
     background: #93d6b3;
 }
@@ -211,16 +209,15 @@ body.dark footer {
         }
 
 
-        /* ===== CARD (DISAMAKAN LEBARNYA DENGAN NAVBAR) ===== */
         .card {
-            width: 92%;             /* Harus sama dengan .navbar */
-            max-width: 1100px;      /* Harus sama dengan .navbar */
+            width: 92%;             
+            max-width: 1100px;     
             background: #ffffff;
             border-top-left-radius: 20px;
             display: flex;
             overflow: hidden;
             box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-            margin: 0 auto;         /* Centering */
+            margin: 0 auto;       
         }
 
         .card-image {
@@ -279,7 +276,6 @@ body.dark footer {
             text-align: center;
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
             .navbar {
                 width: 95%;
@@ -332,7 +328,6 @@ body.dark footer {
             );
         }
 
-        /* Overlay Fade untuk Mobile (Arahnya berubah ke bawah) */
         @media (max-width: 900px) {
             .card-image .overlay {
                 background: linear-gradient(

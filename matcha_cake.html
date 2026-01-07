@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu | MatchaKu</title>
     <link rel="stylesheet" href="css/matcha_latte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="home.html" class="nav-brand">
             <div class="logo-circle">M</div>
@@ -31,9 +31,11 @@
             </div>
         </div>
         <script src="js/darkmode.js"></script>
+
     </nav>
 
-    <!-- MENU -->
+
+
     <div class="menu-section">
 
         <div class="menu-grid">
@@ -41,11 +43,13 @@
                 <img src="images/MATCHA CAKE.jpg" alt="Americano">
                 <div class="menu-content">
                     <h3>Matcha Cake</h3>
-                    <div class="price">Rp 28.000</div>
+                    <div class="price">Rp 30.000</div>
                 </div>
             </div>
             <div class="aboutmenu">
                 <h2>ABOUT MATCHA CAKE</h2>
+                <div class="garisbawah"></div>
+
                 <p>kue lembut yang dibuat dengan matcha premium berkualitas tinggi, menghadirkan cita rasa khas matcha
                     yang halus dan menenangkan. Aroma teh hijau yang lembut berpadu dengan tekstur cake yang moist dan
                     ringan, menciptakan pengalaman rasa yang seimbang dan tidak berlebihan.
@@ -59,33 +63,47 @@
                     menghadirkan kenikmatan sederhana yang berkelas dalam setiap gigitan
                 </p>
                 <br>
-                <h2>INGREDIENT</h2>
-                <ul>
-                    <li>Matcha powder (teh hijau bubuk kualitas premium)</li>
-                    <li>
-                        Milk (susu fresh / full cream / oat milk / almond milk)
-                    </li>
-                    <li>Hot water</li>
-                    <li>Optional (gula, honey)</li>
-                </ul>
 
-                <button class="btn">Pesan Sekarang</button>
+                <div class="ingredient">
+                    <span>Matcha Powder</span>
+                    <span>Fresh Milk</span>
+                    <span>Water</span>
+                    <span>Optional: Sugar / Honey</span>
+                </div>
+
+                <button class="btn" id="btnPesan">Pesan Sekarang</button>
             </div>
         </div>
-    </div>
-
-    <div id="alertBox" class="alert-box">
-        <div class="alert-content">
-            <h3>Terima Kasih!</h3>
-            <p>Pesanan Matcha Latte kamu berhasil.</p>
-
-            <button onclick="tutupAlert()">OK</button>
+        <!-- FORM POPUP -->
+        <div id="orderForm" class="popup">
+            <div class="popup-box">
+                <h3>Form Pemesanan</h3>
+                <input type="text" id="nama" placeholder="Nama">
+                <input type="number" id="jumlah" placeholder="Jumlah">
+                <textarea id="catatan" placeholder="Catatan (opsional)"></textarea>
+                <button id="kirimBtn">Kirim</button>
+                <button id="batalBtn">Batal</button>
+            </div>
         </div>
+
+        <!-- ALERT SUKSES -->
+        <div id="alertBox" class="alert-box">
+            <div class="alert-content">
+                <h3>Terima Kasih!</h3>
+                <p>Pesanan kamu berhasil dikirim.</p>
+                <button id="okBtn">OK</button>
+            </div>
+        </div>
+
+
     </div>
+</div>
+
+
+
 
     <script src="js/function.js"></script>
-
-
+    <script src="js/darkmode.js"></script>
     <footer>
         <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
@@ -95,6 +113,8 @@
         </div>
     </footer>
 
+
+
 </body>
 
-</html>
+</html> 

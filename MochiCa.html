@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu | MatchaKu</title>
     <link rel="stylesheet" href="css/matcha_latte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="home.html" class="nav-brand">
             <div class="logo-circle">M</div>
@@ -31,21 +31,26 @@
             </div>
         </div>
         <script src="js/darkmode.js"></script>
+
     </nav>
 
-    <!-- MENU -->
+
+
+
     <div class="menu-section">
 
         <div class="menu-grid">
             <div class="menu-item">
                 <img src="images/MOTCHICA.jpg" alt="Americano">
                 <div class="menu-content">
-                    <h3>MochiCa</h3>
-                    <div class="price">Rp 28.000</div>
+                    <h3>Matcha Latte</h3>
+                    <div class="price">Rp 15.000</div>
                 </div>
             </div>
             <div class="aboutmenu">
-                <h2>ABOUT MOCHICA</h2>
+                <h2>ABOUT =MOCHICA</h2>
+                <div class="garisbawah"></div>
+
                 <p>mochi menghadirkan sensasi unik di setiap gigitan yang memanjakan lidah dan memberikan pengalaman
                     makan yang berbeda.
 
@@ -56,38 +61,53 @@
                     Mochi tidak hanya menawarkan rasa yang lezat, tetapi juga tampilan yang sederhana dan menarik.
                     Kudapan ini menjadi pilihan tepat bagi Anda yang menyukai dessert ringan dengan sentuhan tradisional
                     yang tetap relevan dengan selera modern.
+
                 </p>
                 <br>
-                <h2>INGREDIENT</h2>
-                <ul>
-                    <li>Glutinous rice flour (tepung ketan)</li>
-                    <li>
-                        Milk
-                    </li>
-                    <li>Eggs</li>
-                    <li>Sugar</li>
-                    <li>Butter</li>
-                    <li>Baking powder</li>
-                    <li>Vanilla extract</li>
-                </ul>
 
-                <button class="btn">Pesan Sekarang</button>
+                <div class="ingredient">
+                    <span>Glutinous rice flour (tepung ketan)</span>
+                    <span>Milk</span>
+                    <span>Eggs</span>
+                    <span>Sugar</span>
+                    <span>Butter</span> 
+                    <span>Baking powder</span>
+                    <span>Vanilla extract</span>
+                </div>
+
+                <button class="btn" id="btnPesan">Pesan Sekarang</button>
             </div>
         </div>
-    </div>
 
-    <div id="alertBox" class="alert-box">
-        <div class="alert-content">
-            <h3>Terima Kasih!</h3>
-            <p>Pesanan Matcha Latte kamu berhasil.</p>
 
-            <button onclick="tutupAlert()">OK</button>
+        <div id="orderForm" class="popup">
+            <div class="popup-box">
+                <h3>Form Pemesanan</h3>
+                <input type="text" id="nama" placeholder="Nama">
+                <input type="number" id="jumlah" placeholder="Jumlah">
+                <textarea id="catatan" placeholder="Catatan (opsional)"></textarea>
+                <button id="kirimBtn">Kirim</button>
+                <button id="batalBtn">Batal</button>
+            </div>
         </div>
+
+        <div id="alertBox" class="alert-box">
+            <div class="alert-content">
+                <h3>Terima Kasih!</h3>
+                <p>Pesanan kamu berhasil dikirim.</p>
+                <button id="okBtn">OK</button>
+            </div>
+        </div>
+
+
     </div>
+</div>
+
+
+
 
     <script src="js/function.js"></script>
-
-
+    <script src="js/darkmode.js"></script>
     <footer>
         <p>&copy; 2026 MatchaKu.</p>
         <div class="footer-links">
@@ -97,6 +117,8 @@
         </div>
     </footer>
 
+
+
 </body>
 
-</html>
+</html> 
